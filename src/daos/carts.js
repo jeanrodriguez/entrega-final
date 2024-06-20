@@ -25,7 +25,6 @@ export default class CartDao {
       const response = await CartModel.findById(id).populate(
         "products.product"
       );
-      console.log("==response==", response);
       return response;
     } catch (error) {
       console.log(error);
@@ -53,7 +52,6 @@ export default class CartDao {
 
   async addProdToCart(cartId, prodId) {
     try {
-      console.log("from addProdToCart==");
       const existProdInCart = await this.existProdInCart(cartId, prodId);
       if (existProdInCart) {
         return await CartModel.findOneAndUpdate(
