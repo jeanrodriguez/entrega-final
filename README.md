@@ -1,6 +1,6 @@
 # Entrega final
 
-### como correr :
+### how start the project :
 
 - npm install.
 - npm run start.
